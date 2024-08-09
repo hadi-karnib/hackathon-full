@@ -29,7 +29,6 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add .
+        git add .  # This adds all changes including submodules; modify if needed
         git commit -m "Automatically updated submodules" || echo "No changes to commit"
-        git remote set-url origin https://${{ secrets.PAT }}@github.com/hadi-karnib/hackathon-full
         git push || echo "Failed to push"
