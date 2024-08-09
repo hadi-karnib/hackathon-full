@@ -12,7 +12,7 @@ jobs:
     - name: Checkout the main repository
       uses: actions/checkout@v2
       with:
-        fetch-depth: 0  # Ensures all history is fetched including tags
+        fetch-depth: 0  # Ensures all history is fetched including tags and branches
 
     - name: Update submodules
       run: |
