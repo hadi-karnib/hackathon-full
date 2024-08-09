@@ -1,0 +1,6 @@
+[submodule "hackathon-front"]
+	path = hackathon-front
+	url = https://github.com/hadi-karnib/hackathon-front.git
+[submodule "hackathon-back"]
+	path = hackathon-back
+	url = https://github.com/hadi-karnib/hackathon-back.git
