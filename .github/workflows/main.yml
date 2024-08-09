@@ -20,12 +20,16 @@ jobs:
         git submodule update --init --recursive --remote --merge
         git submodule status
 
+    - name: Check changes
+      run: |
+        git diff --submodule
+        git status
+
     - name: Commit and Push changes
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add .
-        git status
         git commit -m "Automatically updated submodules" || echo "No changes to commit"
         git remote set-url origin https://${{ secrets.PAT }}@github.com/hadi-karnib/hackathon-full
         git push || echo "Failed to push"
